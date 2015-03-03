@@ -17,6 +17,9 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
+" No line wrap
+set nowrap
+
 " Indicate where 80 chars is
 set colorcolumn=80
 
