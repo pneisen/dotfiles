@@ -23,6 +23,12 @@ echo -n "Changing to the $dir directory ..."
 cd $dir
 echo "done"
 
+# Init and update the git submodules
+echo "Initing and updating git submodules"
+git submodule init
+git submodule update
+echo "done"
+
 # move any existing dotfiles in homedir to dotfiles_old directory, then create
 # symlinks from the homedir to any files in the ~/dotfiles directory specified
 #in $files
