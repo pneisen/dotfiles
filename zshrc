@@ -79,6 +79,7 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias so='web_search duckduckgo \!so'
 
 # Vi command line
 bindkey -v
@@ -88,4 +89,3 @@ export KEYTIMEOUT=1
 export TMOUT=0
 
 # setup variables for docker
-$(/usr/local/bin/boot2docker shellinit 2> /dev/null) 
