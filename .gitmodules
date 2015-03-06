@@ -13,3 +13,6 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = git@github.com:ervandew/supertab.git
+[submodule "git/hooks/bin/git-passport"]
+	path = git/hooks/bin/git-passport
+	url = git@github.com:frace/git-passport.git

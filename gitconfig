@@ -1,0 +1,23 @@
+[user]
+  name = Pete Neisen
+  email = pete@neisen.xyx
+
+[rerere]
+  enabled = true
+
+[push]
+  default = tracking
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
+
+[alias]
+  passport = !${HOME}/.git/hooks/bin/git-passport/git-passport.py
+
+[init]
+  templatedir = ~/.git/templates
