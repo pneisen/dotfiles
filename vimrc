@@ -25,3 +25,7 @@ set colorcolumn=80
 
 " Add the current branch to the status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" Airline
+set laststatus=2
+set ttimeoutlen=50

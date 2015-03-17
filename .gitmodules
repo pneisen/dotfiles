@@ -16,3 +16,6 @@
 [submodule "git/hooks/bin/git-passport"]
 	path = git/hooks/bin/git-passport
 	url = git@github.com:frace/git-passport.git
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline
