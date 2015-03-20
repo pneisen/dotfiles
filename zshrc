@@ -80,6 +80,7 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias so='web_search duckduckgo \!so'
+alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
 
 # Vi command line
 bindkey -v
@@ -87,5 +88,3 @@ export KEYTIMEOUT=1
 
 # Timeout on linux ssh
 export TMOUT=0
-
-# setup variables for docker
