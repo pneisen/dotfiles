@@ -32,3 +32,6 @@ set ttimeoutlen=50
 
 " Line number toggle
 nmap <leader>n :setlocal number!<cr>
+
+" Search up the tree for the tags file
+set tags+=tags;/
