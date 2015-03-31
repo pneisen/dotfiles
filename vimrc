@@ -38,3 +38,6 @@ set tags+=tags;/
 
 " Markdown files
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+" Open current file in default program on OSX for a preview.
+nmap <leader>p :exe ':silent !open -g %'<cr> <bar> :redraw!<cr>
