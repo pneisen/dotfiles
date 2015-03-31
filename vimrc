@@ -35,3 +35,6 @@ nmap <leader>n :setlocal number!<cr>
 
 " Search up the tree for the tags file
 set tags+=tags;/
+
+" Markdown files
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
