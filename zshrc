@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+export DOTFILES=$HOME/dotfiles
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -48,43 +49,14 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(wd git vi-mode cabal vagrant web-search)
 
 # User configuration
-
-export PATH="$HOME/.cabal/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:$HOME/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# If we are on a work vm, source the work setup script.
+if [[ `hostname -s` =~ ^dev\d+.boi.keynetics.com$ ]] then
+  source $DOTFILES/work.sh
+fi
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-export EDITOR='vim'
+# Common setup
+source $DOTFILES/common.sh
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias so='web_search duckduckgo \!so'
-alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
-
-# Vi command line
-bindkey -v
-export KEYTIMEOUT=1
-
-# Timeout on linux ssh
-export TMOUT=0
