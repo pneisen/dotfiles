@@ -1,6 +1,5 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-export DOTFILES=$HOME/dotfiles
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -52,10 +51,10 @@ plugins=(wd git vi-mode cabal vagrant web-search)
 
 # If we are on a work vm, source the work setup script.
 if [[ `hostname -s` =~ ^dev[0-9]+$ ]] then
-  source $DOTFILES/work.sh
+  source $HOME/.work
 fi
 
 # Common setup
-source $DOTFILES/common.sh
+source $HOME/.common
 source $ZSH/oh-my-zsh.sh
 

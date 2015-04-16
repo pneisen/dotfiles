@@ -1,4 +1,3 @@
-#!/bin/bash
 # Configuration for work development VMs.
 
 source /etc/profile
