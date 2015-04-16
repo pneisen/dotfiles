@@ -1,4 +1,5 @@
 #!/bin/bash
+# Configuration shared with all hosts.
 
 PATH="$HOME/.cabal/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:$HOME/bin"
 

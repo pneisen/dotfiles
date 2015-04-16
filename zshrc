@@ -49,14 +49,13 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(wd git vi-mode cabal vagrant web-search)
 
 # User configuration
-source $ZSH/oh-my-zsh.sh
 
 # If we are on a work vm, source the work setup script.
-if [[ `hostname -s` =~ ^dev\d+.boi.keynetics.com$ ]] then
+if [[ `hostname -s` =~ ^dev[0-9]+$ ]] then
   source $DOTFILES/work.sh
 fi
 
 # Common setup
 source $DOTFILES/common.sh
-
+source $ZSH/oh-my-zsh.sh
 
