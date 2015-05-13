@@ -45,13 +45,19 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(wd git vi-mode cabal vagrant web-search)
+plugins=(wd git vi-mode cabal vagrant docker web-search)
 
 # User configuration
 
 # If we are on a work vm, source the work setup script.
 if [[ `hostname -s` =~ ^dev[0-9]+$ ]] then
   source $HOME/.work
+fi
+
+# If we are on a mac, source the osx setup script
+if [[ `uname` == 'Darwin' ]]
+then
+  source $HOME/.osx
 fi
 
 # Common setup

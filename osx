@@ -1,0 +1,8 @@
+# Configuration for OSX
+
+# If boot2docker is installed, load up the env vars
+if [[ -e /usr/local/bin/boot2docker ]]
+then
+  eval $(/usr/local/bin/boot2docker shellinit 2>/dev/null)
+fi
+
