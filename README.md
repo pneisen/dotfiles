@@ -18,5 +18,6 @@ because I always forget these things. Might as well put them in the readme.
 * \\n - Toggle line numbers
 
 #### Custom zsh aliases I have setup
+* fig - Alias for docker-compose
 * gg - Nice git log with the branch graph
 * so - Do a duckduckgo search of stackoverflow
