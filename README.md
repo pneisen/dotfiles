@@ -20,6 +20,11 @@ because I always forget these things. Might as well put them in the readme.
 4. git commit
 5. git push
 
+#### To bring submodules current on other host after update
+1. cd dotfiles
+2. git pull
+3. git submodule update --recursive
+
 #### Custom vim binds I have setup
 * \\p - Open the current file in the default program on OSX for a preview
 * \\n - Toggle line numbers
