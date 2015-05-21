@@ -20,7 +20,7 @@
   persona = !${HOME}/.git/hooks/bin/git-persona-sh/git-persona
 
 [init]
-	templatedir = /Users/pneisen/.git/templates
+	templatedir = ~/.git/templates
 
 [persona]
 home = Pete Neisen <pete@neisen.xyz>
