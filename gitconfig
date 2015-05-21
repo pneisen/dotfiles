@@ -17,7 +17,11 @@
   pager = true
 
 [alias]
-  passport = !${HOME}/.git/hooks/bin/git-passport/git-passport.py
+  persona = !${HOME}/.git/hooks/bin/git-persona-sh/git-persona
 
 [init]
-  templatedir = ~/.git/templates
+	templatedir = /Users/pneisen/.git/templates
+
+[persona]
+home = Pete Neisen <pete@neisen.xyz>
+work = Pete Neisen <pete.neisen@kount.com>
