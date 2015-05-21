@@ -8,10 +8,17 @@ because I always forget these things. Might as well put them in the readme.
 2. cd dotfiles
 3. setup.sh
 
-#### To add a new vim plugin:
+#### To add a new vim plugin or submodule:
 1. cd dotfiles
 2. git submodule add *plugin-repo-url* vim/bundle/*plugin-name*
 3. setup.sh
+
+#### To update all submodules
+1. cd dotfiles
+2. git submodule foreach git pull origin master
+3. git add --all
+4. git commit
+5. git push
 
 #### Custom vim binds I have setup
 * \\p - Open the current file in the default program on OSX for a preview
