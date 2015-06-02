@@ -20,6 +20,9 @@ set softtabstop=2
 " No line wrap
 set nowrap
 
+" Highlight search results
+set hlsearch
+
 " Indicate where 80 chars is
 set colorcolumn=80
 
