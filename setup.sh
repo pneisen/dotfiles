@@ -13,6 +13,14 @@ files="bash_profile git gitconfig vimrc vim zshrc common osx work oh-my-zsh" # l
 
 ##########
 
+# install ctags if we are on linux and it isn't there already
+if [ ! -f /usr/bin/ctags ] && [ ! -f /usr/local/bin/ctags ]; then
+  if [[ $(uname) == 'Linux' ]]; then
+    echo "Installing ctags..."
+    sudo apt-get install -y ctags
+  fi  
+fi
+
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir
