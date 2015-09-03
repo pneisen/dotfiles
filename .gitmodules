@@ -19,3 +19,6 @@
 [submodule "git/hooks/bin/git-persona-sh"]
 	path = git/hooks/bin/git-persona-sh
 	url = https://github.com/gortloveslinux/git-persona-sh.git
+[submodule "vim/bundle/elm.vim"]
+	path = vim/bundle/elm.vim
+	url = https://github.com/lambdatoast/elm.vim.git
