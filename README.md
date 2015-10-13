@@ -28,6 +28,7 @@ because I always forget these things. Might as well put them in the readme.
 #### Custom vim binds I have setup
 * \\p - Open the current file in the default program on OSX for a preview
 * \\n - Toggle line numbers
+* \\s - Toggle spell check
 
 #### Custom zsh aliases I have setup
 * fig - Alias for docker-compose

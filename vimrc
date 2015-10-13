@@ -23,9 +23,6 @@ set nowrap
 " Highlight search results
 set hlsearch
 
-" Indicate where 80 chars is
-set colorcolumn=80
-
 " Add the current branch to the status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
@@ -44,3 +41,6 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Open current file in default program on OSX for a preview.
 nmap <leader>p :exe ':silent !open -g %'<cr> <bar> :redraw!<cr>
+
+" Spell check toggle
+nmap <leader>s :setlocal spell!<cr>
