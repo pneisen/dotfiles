@@ -1,6 +1,9 @@
 # Configuration shared with all hosts.
 
-PATH="$HOME/.cabal/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:$HOME/bin"
+# Golang GOPATH. Need this before the path.
+export GOPATH="$HOME/projects/golang"
+
+PATH="$HOME/.cabal/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:$HOME/bin:$GOPATH/bin"
 
 export TERM=xterm-256color
 export EDITOR='vim'
