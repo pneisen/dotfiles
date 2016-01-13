@@ -1,15 +1,21 @@
 set nocompatible
 
+" Turn off filetype detection and loading of plugins before we run Pathogen
+filetype off
+filetype plugin indent off
+
 " Pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
+execute pathogen#infect()
+execute pathogen#helptags()
+
+" Turn on filetype detection, indent scripts, filetype plugins, and syntax
+" highlighting
+filetype plugin indent on
+syntax on
 
 " Color scheme
 colors distinguished
-
-" Syntax highlighting
-syntax on
 
 " Two space indention
 set expandtab
@@ -44,3 +50,4 @@ nmap <leader>p :exe ':silent !open -g %'<cr> <bar> :redraw!<cr>
 
 " Spell check toggle
 nmap <leader>s :setlocal spell!<cr>
+
