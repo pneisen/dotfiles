@@ -1,21 +1,32 @@
-set nocompatible
+set nocompatible "Require vim and not vi
 
 " Turn off filetype detection and loading of plugins before we run Pathogen
 filetype off
 filetype plugin indent off
 
-" Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-execute pathogen#helptags()
+" Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" The vundle plugin
+Plugin 'VundleVim/Vundle.vim'
+
+" Vim plugins.
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-surround'
+Plugin 'fatih/vim-go'
+Plugin 'gabrielelana/vim-markdown'
 
 " Turn on filetype detection, indent scripts, filetype plugins, and syntax
 " highlighting
+call vundle#end()
 filetype plugin indent on
 syntax on
 
 " Color scheme
-colors distinguished
+colorscheme distinguished
 
 " Two space indention
 set expandtab
