@@ -11,7 +11,7 @@ antigen bundle git
 antigen bundle vi-mode
 antigen bundle vagrant
 antigen bundle docker
-antigen web-search
+antigen bundle web-search
 
 # Theme
 antigen theme miloshadzic
