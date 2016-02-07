@@ -1,6 +1,6 @@
 ## Pete's dot files
 
-My dot files for linux and OSX. I use zsh and vim. Below are notes for myself
+My dot files for linux and OSX. I use zsh and vim with antigen and vundle doing the plugin management. Below are notes for myself
 because I always forget these things. Might as well put them in the readme.
 
 #### To setup a new machine:
@@ -8,7 +8,7 @@ because I always forget these things. Might as well put them in the readme.
 2. cd dotfiles
 3. setup.sh
 
-#### To add a new vim plugin or submodule:
+#### To add a new submodule:
 1. cd dotfiles
 2. git submodule add *plugin-repo-url* vim/bundle/*plugin-name*
 3. setup.sh
