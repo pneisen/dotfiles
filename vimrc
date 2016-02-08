@@ -18,6 +18,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'fatih/vim-go'
 Plugin 'gabrielelana/vim-markdown'
+Plugin 'Valloric/YouCompleteMe'
 
 " Turn on filetype detection, indent scripts, filetype plugins, and syntax
 " highlighting
@@ -61,4 +62,8 @@ nmap <leader>p :exe ':silent !open -g %'<cr> <bar> :redraw!<cr>
 
 " Spell check toggle
 nmap <leader>s :setlocal spell!<cr>
+
+" Remove the preview window for YouCompleteMe
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
 
