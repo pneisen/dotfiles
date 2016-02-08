@@ -1,5 +1,8 @@
 # Configuration for OSX
 
+# Alias for vi
+alias vi=/usr/local/bin/vim
+
 # If docker toolbox is installed and running, load up the env vars
 if [[ -e /usr/local/bin/docker-machine ]]
 then

@@ -6,6 +6,7 @@ antigen use oh-my-zsh
 
 # Bundles
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle wd
 antigen bundle git
 antigen bundle vi-mode
@@ -15,6 +16,15 @@ antigen bundle web-search
 
 # Theme
 antigen theme miloshadzic
+
+# Bind keys for history substring search
+zmodload zsh/terminfo
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
+# bind k and j for VI mode
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 antigen apply
 
