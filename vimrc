@@ -19,6 +19,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'fatih/vim-go'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
 
 " Turn on filetype detection, indent scripts, filetype plugins, and syntax
 " highlighting
@@ -67,3 +68,11 @@ nmap <leader>s :setlocal spell!<cr>
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 
+" Setup UltiSnips
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsEditSplit="vertical"
+
+" Manage imports on save in go
+let g:go_fmt_command = "goimports"
