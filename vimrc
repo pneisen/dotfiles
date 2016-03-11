@@ -1,13 +1,7 @@
 set nocompatible "Require vim and not vi
 
-" Turn off filetype detection and loading of plugins before we run Pathogen
-filetype off
-filetype plugin indent off
-
-" Plug
-call plug#begin('~/.vim/plugged')
-
 " Vim plugins.
+call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
@@ -17,12 +11,7 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'Valloric/YouCompleteMe'
 Plug 'SirVer/ultisnips'
 Plug 'elmcast/elm-vim'
-
-" Turn on filetype detection, indent scripts, filetype plugins, and syntax
-" highlighting
 call plug#end()
-filetype plugin indent on
-syntax on
 
 " Color scheme
 colorscheme distinguished
