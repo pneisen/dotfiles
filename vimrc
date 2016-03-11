@@ -4,27 +4,23 @@ set nocompatible "Require vim and not vi
 filetype off
 filetype plugin indent off
 
-" Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" The vundle plugin
-Plugin 'VundleVim/Vundle.vim'
+" Plug
+call plug#begin('~/.vim/plugged')
 
 " Vim plugins.
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-surround'
-Plugin 'fatih/vim-go'
-Plugin 'gabrielelana/vim-markdown'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
-Plugin 'elmcast/elm-vim'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-surround'
+Plug 'fatih/vim-go'
+Plug 'gabrielelana/vim-markdown'
+Plug 'Valloric/YouCompleteMe'
+Plug 'SirVer/ultisnips'
+Plug 'elmcast/elm-vim'
 
 " Turn on filetype detection, indent scripts, filetype plugins, and syntax
 " highlighting
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 syntax on
 

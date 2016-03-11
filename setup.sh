@@ -31,9 +31,6 @@ git submodule init
 git submodule update
 echo "done"
 
-# Install vundle plugins
-vim +PluginInstall +qall
-
 # Create symlinks from the homedir to any files in the ~/dotfiles directory specified
 #in $files
 for file in $files; do
@@ -41,6 +38,15 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+# Install Plug
+if [ ! -f vim/autoload/plug.vim ]; then
+  echo "Installing Vim Plug"
+  curl -fLo vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
+# Install Vim plugins
+vim +PlugInstall +qall
 
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
