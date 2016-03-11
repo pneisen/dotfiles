@@ -26,9 +26,9 @@ because I always forget these things. Might as well put them in the readme.
 3. git submodule update --recursive
 
 #### Custom vim binds I have setup
-* \\p - Open the current file in the default program on OSX for a preview
-* \\n - Toggle line numbers
-* \\s - Toggle spell check
+* <space>p - Open the current file in the default program on OSX for a preview
+* <space>n - Toggle line numbers
+* <space>s - Toggle spell check
 
 #### Zsh aliases I have setup
 * fig - Alias for docker-compose

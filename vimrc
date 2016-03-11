@@ -35,6 +35,9 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
 set ttimeoutlen=50
 
+" Set leader to space
+let mapleader = " "
+
 " Line number toggle
 nmap <leader>n :setlocal number!<cr>
 
