@@ -1,9 +1,6 @@
 [submodule "git/hooks/bin/git-persona-sh"]
 	path = git/hooks/bin/git-persona-sh
 	url = https://github.com/gortloveslinux/git-persona-sh.git
-[submodule "vim/bundle/Vundle.vim"]
-	path = vim/bundle/Vundle.vim
-	url = https://github.com/VundleVim/Vundle.vim.git
 [submodule "antigen"]
 	path = antigen
 	url = https://github.com/zsh-users/antigen.git
