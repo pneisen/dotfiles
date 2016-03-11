@@ -65,3 +65,13 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Manage imports on save in go
 let g:go_fmt_command = "goimports"
+
+" Syntastic options
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+
+" Code coverage from aws
+au FileType go nmap <leader>tc :!clear && pushd $(dirname $(go test -coverprofile=coverage.out &>/dev/null && go tool cover -html=coverage.out 2>&1 \| awk '{print $5}')); echo "Coverage report: `hostname --fqdn`/coverage.html"; sudo python -m SimpleHTTPServer 80 &>/dev/null; popd<CR>
