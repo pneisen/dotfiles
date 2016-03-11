@@ -20,6 +20,7 @@ Plugin 'fatih/vim-go'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
+Plugin 'elmcast/elm-vim'
 
 " Turn on filetype detection, indent scripts, filetype plugins, and syntax
 " highlighting
