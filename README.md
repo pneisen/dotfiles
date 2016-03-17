@@ -28,7 +28,9 @@ because I always forget these things. Might as well put them in the readme.
 #### Custom vim binds I have setup
 * ```space```p - Open the current file in the default program on OSX for a preview
 * ```space```n - Toggle line numbers
+* ```space```r - Toggle relative line numbers
 * ```space```s - Toggle spell check
+* ```space```c - Clear the highlight for the current search
 * ```space```tc - Run the golang code coverage tools on the current package and start a simple python server to host it
 
 #### Zsh aliases I have setup
