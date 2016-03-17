@@ -40,6 +40,7 @@ let mapleader = " "
 
 " Line number toggle
 nmap <leader>n :setlocal number!<cr>
+nmap <leader>r :setlocal relativenumber!<cr>
 
 " Search up the tree for the tags file
 set tags+=tags;/
@@ -52,6 +53,9 @@ nmap <leader>p :exe ':silent !open -g %'<cr> <bar> :redraw!<cr>
 
 " Spell check toggle
 nmap <leader>s :setlocal spell!<cr>
+
+" Clear the current search
+nmap <leader>c :noh<cr>
 
 " Remove the preview window for YouCompleteMe
 set completeopt-=preview
