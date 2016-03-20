@@ -6,11 +6,10 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'gabrielelana/vim-markdown'
 Plug 'Valloric/YouCompleteMe'
-Plug 'SirVer/ultisnips'
-Plug 'elmcast/elm-vim'
+Plug 'elmcast/elm-vim', { 'for': 'elm' }
 call plug#end()
 
 " Color scheme
@@ -60,12 +59,6 @@ nmap <leader>c :noh<cr>
 " Remove the preview window for YouCompleteMe
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
-
-" Setup UltiSnips
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsEditSplit="vertical"
 
 " Manage imports on save in go
 let g:go_fmt_command = "goimports"
