@@ -6,10 +6,10 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go'
 Plug 'gabrielelana/vim-markdown'
 Plug 'Valloric/YouCompleteMe'
-Plug 'elmcast/elm-vim', { 'for': 'elm' }
+Plug 'lambdatoast/elm.vim'
 call plug#end()
 
 " Color scheme
@@ -24,6 +24,13 @@ set softtabstop=2
 " No line wrap
 set nowrap
 
+" No .swp files
+set noswapfile
+
+" Persistent undo
+set undodir=~/.vim/undo
+set undofile
+
 " Highlight search results
 set hlsearch
 
@@ -33,9 +40,19 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " Airline
 set laststatus=2
 set ttimeoutlen=50
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " Set leader to space
 let mapleader = " "
+
+" Buffers
+nmap <leader>k :bn<cr>
+nmap <leader>j :bp<cr>
+nmap <leader>d :bd<cr>
 
 " Line number toggle
 nmap <leader>n :setlocal number!<cr>
@@ -62,6 +79,9 @@ let g:ycm_add_preview_to_completeopt = 0
 
 " Manage imports on save in go
 let g:go_fmt_command = "goimports"
+
+" Format rust files on save
+let g:rustfmt_autosave = 1
 
 " Syntastic options
 let g:syntastic_always_populate_loc_list = 1
