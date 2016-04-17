@@ -31,9 +31,13 @@ because I always forget these things. Might as well put them in the readme.
 * ```space```r - Toggle relative line numbers
 * ```space```s - Toggle spell check
 * ```space```c - Clear the highlight for the current search
+* ```space```j - Change to the previous buffer
+* ```space```k - Change to the next buffer
+* ```space```d - Delete the current buffer
 * ```space```tc - Run the golang code coverage tools on the current package and start a simple python server to host it
 
 #### Zsh aliases I have setup
 * fig - Alias for docker-compose
 * so - Do a duckduckgo search of stackoverflow
 * glog - Nice git log
+* sshaws - Alias to ssh, but don't write to known_hosts file. Used for connecting to AWS where the host changes almost every time.
