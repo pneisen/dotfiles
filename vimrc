@@ -54,9 +54,11 @@ nmap <leader>k :bn<cr>
 nmap <leader>j :bp<cr>
 nmap <leader>d :bd<cr>
 
-" Line number toggle
+" Line number
 nmap <leader>n :setlocal number!<cr>
 nmap <leader>r :setlocal relativenumber!<cr>
+set relativenumber
+set number
 
 " Search up the tree for the tags file
 set tags+=tags;/
