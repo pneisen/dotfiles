@@ -34,7 +34,7 @@ because I always forget these things. Might as well put them in the readme.
 * ```space```j - Change to the previous buffer
 * ```space```k - Change to the next buffer
 * ```space```d - Delete the current buffer
-* ```space```tc - Run the golang code coverage tools on the current package and start a simple python server to host it
+* ```space```tc - Run the golang code coverage from vim-go
 
 #### Zsh aliases I have setup
 * fig - Alias for docker-compose
