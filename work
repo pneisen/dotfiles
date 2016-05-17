@@ -1,4 +1,4 @@
 # Configuration for work development VMs.
 
-source /etc/profile
+#source /etc/profile
 export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-x64
