@@ -91,6 +91,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+let g:syntastic_php_checkers = ['php', 'phpmd']
 
 " vim-go code coverage toggle
 au FileType go nmap <leader>tc :GoCoverageToggle<cr>
