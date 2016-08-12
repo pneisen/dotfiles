@@ -88,9 +88,9 @@ let g:rustfmt_autosave = 1
 " Syntastic options
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+let g:syntastic_check_on_wq = 1
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_php_checkers = ['php', 'phpmd']
 
 " vim-go code coverage toggle
