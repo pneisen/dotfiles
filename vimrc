@@ -9,7 +9,7 @@ Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go'
 Plug 'gabrielelana/vim-markdown'
 Plug 'Valloric/YouCompleteMe'
-Plug 'lambdatoast/elm.vim'
+Plug 'elmcast/elm-vim'
 call plug#end()
 
 " Color scheme
@@ -81,9 +81,6 @@ let g:ycm_add_preview_to_completeopt = 0
 
 " Manage imports on save in go
 let g:go_fmt_command = "goimports"
-
-" Format rust files on save
-let g:rustfmt_autosave = 1
 
 " Syntastic options
 let g:syntastic_always_populate_loc_list = 1
