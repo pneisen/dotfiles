@@ -95,3 +95,10 @@ let g:syntastic_php_checkers = ['php', 'phpmd']
 
 " vim-go code coverage toggle
 au FileType go nmap <leader>tc :GoCoverageToggle<cr>
+
+" Elm
+let g:elm_syntastic_show_warnings = 1
+let g:elm_format_autosave = 1
+let g:ycm_semantic_triggers = {
+      \ 'elm' : ['.'],
+      \}
