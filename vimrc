@@ -10,6 +10,9 @@ Plug 'fatih/vim-go'
 Plug 'gabrielelana/vim-markdown'
 Plug 'Valloric/YouCompleteMe'
 Plug 'elmcast/elm-vim'
+" Needed for easytags
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
 call plug#end()
 
 " Color scheme
@@ -20,6 +23,9 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+
+" Set the indent to 4 for elm
+autocmd BufNewFile,BufRead  *.elm setlocal ts=4 sw=4 sts=4 expandtab
 
 " No line wrap
 set nowrap
