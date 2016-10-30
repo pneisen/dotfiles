@@ -8,7 +8,7 @@
 ########## Variables
 
 dir=~/dotfiles                    # dotfiles directory
-files="config bash_profile git gitconfig vimrc vim" # list of files/folders to symlink in homedir
+files="config bash_profile git gitconfig gitignore vimrc vim" # list of files/folders to symlink in homedir
 
 ##########
 

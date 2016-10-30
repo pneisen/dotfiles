@@ -25,5 +25,7 @@
 [persona]
 home = Pete Neisen <pete@neisen.xyz>
 work = Pete Neisen <pete.neisen@kount.com>
+
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore

@@ -9,7 +9,6 @@ set -gx TERM xterm-256color
 set -gx EDITOR vim
 
 # Abbreviations
-abbr so web_search duckduckgo \!so
 abbr fig docker-compose
 abbr sshaws ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
 

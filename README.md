@@ -38,6 +38,4 @@ because I always forget these things. Might as well put them in the readme.
 
 #### Zsh aliases I have setup
 * fig - Alias for docker-compose
-* so - Do a duckduckgo search of stackoverflow
-* glog - Nice git log
 * sshaws - Alias to ssh, but don't write to known_hosts file. Used for connecting to AWS where the host changes almost every time.
