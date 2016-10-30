@@ -1,5 +1,9 @@
 set nocompatible "Require vim and not vi
 
+if &shell =~# 'fish$'
+  set shell=sh
+endif
+
 " Vim plugins.
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/syntastic'

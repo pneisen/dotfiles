@@ -8,7 +8,7 @@
 ########## Variables
 
 dir=~/dotfiles                    # dotfiles directory
-files="bash_profile git gitconfig vimrc vim zshrc common osx work" # list of files/folders to symlink in homedir
+files="config bash_profile git gitconfig vimrc vim zshrc common osx work" # list of files/folders to symlink in homedir
 
 ##########
 
@@ -48,26 +48,14 @@ fi
 # Install Vim plugins
 vim +PlugInstall +qall
 
-install_zsh () {
-# Test to see if zshell is installed.  If it is:
-if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
-    # Set the default shell to zsh if it isn't currently set to zsh
-    if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
-        chsh -s $(which zsh)
+# Test to see if fish is installed.  If it is:
+if [ -f /usr/local/bin/fish ]; then
+    # Set the default shell to fish if it isn't currently set to fish
+    if [[ ! $(echo $SHELL) == '/usr/local/bin/fish' ]]; then
+        echo /usr/local/bin/fish | sudo tee -a /etc/shells
+        chsh -s /usr/local/bin/fish
     fi
 else
-    # If zsh isn't installed, get the platform of the current machine
-    platform=$(uname);
-    # If the platform is Linux, try an apt-get to install zsh and then recurse
-    if [[ $platform == 'Linux' ]]; then
-        sudo apt-get install -y zsh
-        install_zsh
-    # If the platform is OS X, tell the user to install zsh :)
-    elif [[ $platform == 'Darwin' ]]; then
-        echo "Please install zsh, then re-run this script!"
-        exit
-    fi
+  echo "Please install fish shell and re-run"
 fi
-}
 
-install_zsh
