@@ -34,7 +34,7 @@ echo "done"
 # Create symlinks from the homedir to any files in the ~/dotfiles directory specified
 #in $files
 for file in $files; do
-    rm ~/.$file
+    rm -rf ~/.$file
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
@@ -49,11 +49,14 @@ fi
 vim +PlugInstall +qall
 
 # Test to see if fish is installed.  If it is:
-if [ -f /usr/local/bin/fish ]; then
+if [ -f /usr/local/bin/fish -o -f /usr/bin/fish ]; then
     # Set the default shell to fish if it isn't currently set to fish
-    if [[ ! $(echo $SHELL) == '/usr/local/bin/fish' ]]; then
-        echo /usr/local/bin/fish | sudo tee -a /etc/shells
-        chsh -s /usr/local/bin/fish
+    if [[ ! $(echo $SHELL) == $(which fish) ]]; then
+      if ! grep -Fxq $(which fish) /etc/shells
+      then
+        echo $(which fish) | sudo tee -a /etc/shells
+      fi
+      chsh -s $(which fish)
     fi
 else
   echo "Please install fish shell and re-run"
