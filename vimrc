@@ -1,7 +1,7 @@
 set nocompatible "Require vim and not vi
 
 if &shell =~# 'fish$'
-  set shell=sh
+  set shell=bash
 endif
 
 " Vim plugins.
