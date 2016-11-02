@@ -43,3 +43,15 @@ end
 function tab_violet
   tab_color 238 130 238
 end
+
+function tab_brown
+  tab_color 139 69 19
+end
+
+function tab_title
+  if count $argv > /dev/null
+    set -gx fish_title_string $argv[1]
+  else
+    set -e fish_title_string
+  end
+end
