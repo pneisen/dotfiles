@@ -17,6 +17,10 @@ Plug 'elmcast/elm-vim'
 " Needed for easytags
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
+" Needed for ghcmod
+Plug 'Shougo/vimproc.vim'
+Plug 'eagletmt/ghcmod-vim'
+
 call plug#end()
 
 " Color scheme
@@ -60,13 +64,13 @@ let g:airline_powerline_fonts = 1
 let mapleader = " "
 
 " Buffers
-nmap <leader>k :bn<cr>
-nmap <leader>j :bp<cr>
-nmap <leader>d :bd<cr>
+nnoremap <leader>k :bn<cr>
+nnoremap <leader>j :bp<cr>
+nnoremap <leader>d :bd<cr>
 
 " Line number
-nmap <leader>n :setlocal number!<cr>
-nmap <leader>r :setlocal relativenumber!<cr>
+nnoremap <leader>n :setlocal number!<cr>
+nnoremap <leader>r :setlocal relativenumber!<cr>
 set relativenumber
 set number
 
@@ -77,13 +81,13 @@ set tags+=tags;/
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Open current file in default program on OSX for a preview.
-nmap <leader>p :exe ':silent !open -g %'<cr> <bar> :redraw!<cr>
+nnoremap <leader>p :exe ':silent !open -g %'<cr> <bar> :redraw!<cr>
 
 " Spell check toggle
-nmap <leader>s :setlocal spell!<cr>
+nnoremap <leader>s :setlocal spell!<cr>
 
 " Clear the current search
-nmap <leader>c :noh<cr>
+nnoremap <leader>c :noh<cr>
 
 " Remove the preview window for YouCompleteMe
 set completeopt-=preview
@@ -101,7 +105,7 @@ let g:syntastic_go_checkers = ['go', 'golint', 'govet']
 let g:syntastic_php_checkers = ['php', 'phpmd']
 
 " vim-go code coverage toggle
-au FileType go nmap <leader>tc :GoCoverageToggle<cr>
+au FileType go nnoremap <leader>tc :GoCoverageToggle<cr>
 
 " Elm
 let g:elm_syntastic_show_warnings = 1
@@ -109,3 +113,11 @@ let g:elm_format_autosave = 1
 let g:ycm_semantic_triggers = {
       \ 'elm' : ['.'],
       \}
+
+" Haskell
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
