@@ -7,6 +7,7 @@ endif
 " Vim plugins.
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
@@ -33,7 +34,10 @@ set shiftwidth=2
 set softtabstop=2
 
 " Set the indent to 4 for elm
-autocmd BufNewFile,BufRead  *.elm setlocal ts=4 sw=4 sts=4 expandtab
+augroup elm_settings
+  autocmd!
+  autocmd BufNewFile,BufRead  *.elm setlocal ts=4 sw=4 sts=4 expandtab
+augroup END
 
 " No line wrap
 set nowrap
@@ -54,6 +58,7 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " Airline
 set laststatus=2
 set ttimeoutlen=50
+set noshowmode
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
@@ -77,8 +82,11 @@ set number
 " Search up the tree for the tags file
 set tags+=tags;/
 
-" Markdown files
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+" Set .md files as markdown
+augroup markdown_filetype
+  autocmd!
+  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+augroup END
 
 " Open current file in default program on OSX for a preview.
 nnoremap <leader>p :exe ':silent !open -g %'<cr> <bar> :redraw!<cr>
@@ -105,7 +113,10 @@ let g:syntastic_go_checkers = ['go', 'golint', 'govet']
 let g:syntastic_php_checkers = ['php', 'phpmd']
 
 " vim-go code coverage toggle
-au FileType go nnoremap <leader>tc :GoCoverageToggle<cr>
+augroup go_settings
+  autocmd!
+  autocmd FileType go nnoremap <leader>tc :GoCoverageToggle<cr>
+augroup END
 
 " Elm
 let g:elm_syntastic_show_warnings = 1
