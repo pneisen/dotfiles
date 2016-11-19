@@ -1,6 +1,6 @@
 ## Pete's dot files
 
-My dot files for linux and OSX. I use zsh and vim with antigen and vundle doing the plugin management. Below are notes for myself
+My dot files for linux and OSX. I use fish and vim with plug doing the plugin management. Below are notes for myself
 because I always forget these things. Might as well put them in the readme.
 
 #### To setup a new machine:
@@ -36,6 +36,7 @@ because I always forget these things. Might as well put them in the readme.
 * ```space```d - Delete the current buffer
 * ```space```tc - Run the golang code coverage from vim-go
 
-#### Zsh aliases I have setup
+#### fish aliases I have setup
 * fig - Alias for docker-compose
 * sshaws - Alias to ssh, but don't write to known_hosts file. Used for connecting to AWS where the host changes almost every time.
+* vi - Alias for vim
