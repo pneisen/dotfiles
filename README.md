@@ -35,6 +35,7 @@ because I always forget these things. Might as well put them in the readme.
 * ```space```k - Change to the next buffer
 * ```space```d - Delete the current buffer
 * ```space```tc - Run the golang code coverage from vim-go
+* ```space```q - Reflow paragraph in markdown file
 
 #### fish aliases I have setup
 * fig - Alias for docker-compose
