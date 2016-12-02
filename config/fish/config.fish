@@ -7,6 +7,9 @@ set fish_key_bindings fish_user_key_bindings
 # Load the tab color and title functions
 source $HOME/.config/fish/iterm2_tab.fish
 
+# Load utility functions
+source $HOME/.config/fish/util.fish
+
 # If at work, run the work script.
 set -l host_match (string match '^dev[0-9]+$' (hostname -s))
 if test -n "$host_match"
