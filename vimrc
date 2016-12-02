@@ -97,6 +97,11 @@ nnoremap <leader>s :setlocal spell!<cr>
 " Clear the current search
 nnoremap <leader>c :noh<cr>
 
+" netrw options
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+nnoremap <leader>e :Explore<cr>
+
 " Remove the preview window for YouCompleteMe
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
