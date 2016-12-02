@@ -12,7 +12,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go'
-Plug 'gabrielelana/vim-markdown'
 Plug 'Valloric/YouCompleteMe'
 Plug 'elmcast/elm-vim'
 " Needed for easytags
@@ -21,6 +20,8 @@ Plug 'xolox/vim-easytags'
 " Needed for ghcmod
 Plug 'Shougo/vimproc.vim'
 Plug 'eagletmt/ghcmod-vim'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
 
@@ -81,12 +82,6 @@ set number
 
 " Search up the tree for the tags file
 set tags+=tags;/
-
-" Set .md files as markdown
-augroup markdown_filetype
-  autocmd!
-  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-augroup END
 
 " Open current file in default program on OSX for a preview.
 nnoremap <leader>p :exe ':silent !open -g %'<cr> <bar> :redraw!<cr>
