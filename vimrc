@@ -12,7 +12,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go'
-Plug 'gabrielelana/vim-markdown'
 Plug 'Valloric/YouCompleteMe'
 Plug 'elmcast/elm-vim'
 " Needed for easytags
@@ -21,6 +20,8 @@ Plug 'xolox/vim-easytags'
 " Needed for ghcmod
 Plug 'Shougo/vimproc.vim'
 Plug 'eagletmt/ghcmod-vim'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
 
@@ -82,12 +83,6 @@ set number
 " Search up the tree for the tags file
 set tags+=tags;/
 
-" Set .md files as markdown
-augroup markdown_filetype
-  autocmd!
-  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-augroup END
-
 " Open current file in default program on OSX for a preview.
 nnoremap <leader>p :exe ':silent !open -g %'<cr> <bar> :redraw!<cr>
 
@@ -96,6 +91,11 @@ nnoremap <leader>s :setlocal spell!<cr>
 
 " Clear the current search
 nnoremap <leader>c :noh<cr>
+
+" netrw options
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+nnoremap <leader>e :Explore<cr>
 
 " Remove the preview window for YouCompleteMe
 set completeopt-=preview
