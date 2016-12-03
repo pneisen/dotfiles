@@ -28,16 +28,17 @@ call plug#end()
 " Color scheme
 colorscheme distinguished
 
-" Two space indention
+" Two space indention by default
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-" Set the indent to 4 for elm
-augroup elm_settings
+" Set the indent to 4 for elm and docs
+augroup four_space
   autocmd!
-  autocmd BufNewFile,BufRead  *.elm setlocal ts=4 sw=4 sts=4 expandtab
+  autocmd BufNewFile,BufRead *.elm setlocal ts=4 sw=4 sts=4 expandtab
+  autocmd Filetype pandoc setlocal ts=4 sw=4 sts=4 expandtab
 augroup END
 
 " No line wrap
