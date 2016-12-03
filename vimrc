@@ -38,7 +38,7 @@ set softtabstop=2
 augroup four_space
   autocmd!
   autocmd BufNewFile,BufRead *.elm setlocal ts=4 sw=4 sts=4 expandtab
-  autocmd Filetype pandoc setlocal ts=4 sw=4 sts=4 expandtab
+"  autocmd Filetype pandoc setlocal ts=4 sw=4 sts=4 expandtab
 augroup END
 
 " No line wrap
