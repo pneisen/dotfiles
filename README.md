@@ -41,6 +41,7 @@ because I always forget these things. Might as well put them in the readme.
 * fig - Alias for docker-compose
 * sshaws - Alias to ssh, but don't write to known_hosts file. Used for connecting to AWS where the host changes almost every time.
 * vi - Alias for vim
+* .plan - Edits my .plan file (repo must be checked out in my home directory)
 
 #### fish functions I have setup
 * tree - Display a bash style directory tree

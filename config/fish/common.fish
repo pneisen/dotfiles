@@ -11,6 +11,7 @@ set -gx EDITOR vim
 # Abbreviations
 abbr fig docker-compose
 abbr sshaws ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
+abbr .plan vim ~/.plan/README.md
 
 # Timeout on linux ssh
 set -gx TMOUT 0
