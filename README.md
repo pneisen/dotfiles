@@ -41,7 +41,7 @@ because I always forget these things. Might as well put them in the readme.
 * fig - Alias for docker-compose
 * sshaws - Alias to ssh, but don't write to known_hosts file. Used for connecting to AWS where the host changes almost every time.
 * vi - Alias for vim
-* reload - Alias for `source ~/.config/fish/config.fish`
+* fish_reload - Alias for `source ~/.config/fish/config.fish`
 
 #### fish functions I have setup
 * .plan - Edits my .plan file, commits, and pushes changes (the repo will be cloned if needed) 
