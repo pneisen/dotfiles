@@ -41,6 +41,11 @@ augroup four_space
 "  autocmd Filetype pandoc setlocal ts=4 sw=4 sts=4 expandtab
 augroup END
 
+" Unfold on startup
+augroup open_folds
+  autocmd Filetype pandoc normal zR
+augroup END
+
 " No line wrap
 set nowrap
 
