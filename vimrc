@@ -18,7 +18,7 @@ Plug 'elmcast/elm-vim'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 " Needed for ghcmod
-Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'eagletmt/ghcmod-vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
