@@ -41,6 +41,13 @@ augroup four_space
 "  autocmd Filetype pandoc setlocal ts=4 sw=4 sts=4 expandtab
 augroup END
 
+" Set the indent to 2 spaces for haskell
+augroup two_space
+  autocmd!
+  autocmd Filetype haskell setlocal ts=2 sw=2 expandtab
+augroup END
+
+
 " Unfold on startup
 augroup open_folds
   autocmd Filetype pandoc normal zR
