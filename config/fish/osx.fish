@@ -1,4 +1,6 @@
 # Configuration for OSX
 
-abbr vi vim
+# Load my ssh keys
+ssh-add -K
 
+abbr vi vim
