@@ -12,16 +12,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go'
-Plug 'Valloric/YouCompleteMe'
 Plug 'elmcast/elm-vim'
-" Needed for easytags
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
 " Needed for ghcmod
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'eagletmt/ghcmod-vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'ludovicchabant/vim-gutentags'
 
 call plug#end()
 
@@ -122,7 +119,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_aggregate_errors = 1
-let g:syntastic_go_checkers = ['go', 'golint', 'govet']
+let g:syntastic_go_checkers = ['go1.8rc2', 'golint', 'govet']
 let g:syntastic_php_checkers = ['php', 'phpmd']
 
 " vim-go code coverage toggle
