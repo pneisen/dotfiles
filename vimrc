@@ -83,6 +83,7 @@ let mapleader = " "
 nnoremap <leader>k :bn<cr>
 nnoremap <leader>j :bp<cr>
 nnoremap <leader>d :bd<cr>
+nnoremap <leader>l :ls<CR>:b<Space>
 
 " Line number
 nnoremap <leader>n :setlocal number!<cr>
