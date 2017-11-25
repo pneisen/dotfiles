@@ -6,7 +6,8 @@ endif
 
 " Vim plugins.
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
@@ -46,7 +47,6 @@ augroup two_space
   autocmd Filetype haskell setlocal ts=2 sw=2 expandtab
 augroup END
 
-
 " Unfold on startup
 augroup open_folds
   autocmd Filetype pandoc normal zR
@@ -68,6 +68,10 @@ set hlsearch
 " Add the current branch to the status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+" ALE
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
 " Airline
 set laststatus=2
 set ttimeoutlen=50
@@ -77,6 +81,7 @@ if !exists('g:airline_symbols')
 endif
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#ale#enabled = 1
 
 " Set leader to space
 let mapleader = " "
@@ -110,20 +115,8 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 nnoremap <leader>e :Explore<cr>
 
-" Remove the preview window for YouCompleteMe
-set completeopt-=preview
-let g:ycm_add_preview_to_completeopt = 0
-
 " Manage imports on save in go
 let g:go_fmt_command = "goimports"
-
-" Syntastic options
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_go_checkers = ['go1.8rc2', 'golint', 'govet']
-let g:syntastic_php_checkers = ['php', 'phpmd']
 
 " vim-go code coverage toggle
 augroup go_settings
