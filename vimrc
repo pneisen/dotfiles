@@ -16,6 +16,7 @@ Plug 'elmcast/elm-vim'
 " Needed for ghcmod
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'eagletmt/ghcmod-vim'
+Plug 'eagletmt/neco-ghc'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'ludovicchabant/vim-gutentags'
@@ -30,6 +31,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set autoindent
 
 " Set the indent to 4 for elm and docs
 augroup four_space
@@ -143,3 +145,6 @@ let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
 let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
 let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+
+let g:haskellmode_completion_ghc = 0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
