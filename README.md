@@ -36,6 +36,8 @@ because I always forget these things. Might as well put them in the readme.
 * `space d` - Delete the current buffer
 * `space tc` - Run the golang code coverage from vim-go
 * `space e` - Launch netrw directory browser (:Explore)
+* `ctrl-j` - Next error/warning ([ALE](https://github.com/w0rp/ale))
+* `ctrl-k` - Previous error/warning ([ALE](https://github.com/w0rp/ale))
 
 #### fish aliases I have setup
 * fig - Alias for docker-compose
@@ -44,9 +46,9 @@ because I always forget these things. Might as well put them in the readme.
 * fish_reload - Alias for `source ~/.config/fish/config.fish`
 
 #### fish functions I have setup
-* .plan - Edits my .plan file, commits, and pushes changes (the repo will be cloned if needed) 
+* .plan - Edits my .plan file, commits, and pushes changes (the repo will be cloned if needed)
 * tree - Display a bash style directory tree
 * tab_title - Set the title on the current iterm2 tab
 * tab_color <red> <green> <blue> - Set the current iterm2 tab to the color indicated by the RGB values (0-255)
 * tab_nocolor - Set the current iterm2 tab back to default
-* tab_red - Shortcut for calling *tab_color 255 0 0* - These exist for standard ROYGBIV colors as well as black, white, and brown 
+* tab_red - Shortcut for calling *tab_color 255 0 0* - These exist for standard ROYGBIV colors as well as black, white, and brown

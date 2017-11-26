@@ -6,7 +6,6 @@ endif
 
 " Vim plugins.
 call plug#begin('~/.vim/plugged')
-" Plug 'scrooloose/syntastic'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
