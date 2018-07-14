@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'w0rp/ale'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-dispatch'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go'
@@ -64,12 +65,16 @@ set undofile
 " Highlight search results
 set hlsearch
 
+" Turn off the preview window for omnicomplete
+:set completeopt-=preview
+
 " Add the current branch to the status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " ALE
 let g:ale_sign_column_always = 1
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+let g:ale_set_highlights = 0
+nmap <silent> <C-k> <Plug>(ale_previous_wrap) 
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Airline
