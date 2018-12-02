@@ -1,12 +1,14 @@
 # Configuration shared with all hosts.
 
-# Golang GOPATH. Need this before the path.
-set -gx GOPATH $HOME/projects/golang
-
-set -gx PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /opt/X11/bin /usr/local/go/bin $HOME/bin $GOPATH/bin $HOME/.local/bin
+set -gx PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/go/bin $HOME/bin $HOME/go/bin $HOME/.cargo/bin
 
 set -gx TERM xterm-256color
 set -gx EDITOR vim
+
+set -gx DOCKER_HOST tcp://0.0.0.0:2375
+
+# Set the umask. This is really needed for WSL.
+umask 077
 
 # Abbreviations
 abbr fig docker-compose

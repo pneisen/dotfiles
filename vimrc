@@ -13,7 +13,8 @@ Plug 'tpope/vim-dispatch'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go'
-Plug 'elmcast/elm-vim'
+Plug 'rust-lang/rust.vim'
+
 " Needed for ghcmod
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'eagletmt/ghcmod-vim'
@@ -21,6 +22,7 @@ Plug 'eagletmt/neco-ghc'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 
 call plug#end()
 
@@ -74,7 +76,7 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " ALE
 let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
-nmap <silent> <C-k> <Plug>(ale_previous_wrap) 
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Airline
@@ -129,12 +131,8 @@ augroup go_settings
   autocmd FileType go nnoremap <leader>tc :GoCoverageToggle<cr>
 augroup END
 
-" Elm
-let g:elm_syntastic_show_warnings = 1
-let g:elm_format_autosave = 1
-let g:ycm_semantic_triggers = {
-      \ 'elm' : ['.'],
-      \}
+" Rust
+let g:rustfmt_autosave = 1
 
 " Haskell
 let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
