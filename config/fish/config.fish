@@ -10,6 +10,9 @@ source $HOME/.config/fish/iterm2_tab.fish
 # Load utility functions
 source $HOME/.config/fish/util.fish
 
+# Load my contacts functions
+source $HOME/.config/fish/contacts.fish
+
 # If at work, run the work script.
 set -l host_match (string match '^dev[0-9]+$' (hostname -s))
 if test -n "$host_match"
