@@ -7,6 +7,8 @@ endif
 " Vim plugins.
 call plug#begin('~/.vim/plugged')
 Plug 'w0rp/ale'
+Plug 'natebosch/vim-lsc'
+Plug 'ervandew/supertab'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-dispatch'
@@ -21,7 +23,7 @@ Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'ludovicchabant/vim-gutentags'
+"Plug 'ludovicchabant/vim-gutentags'
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 
 call plug#end()
@@ -79,6 +81,12 @@ let g:ale_set_highlights = 0
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
+" LSC
+let g:lsc_server_commands = {'go': 'bingo'}
+let g:lsc_auto_map = v:true
+" let g:lsc_enable_autocomplete = v:false
+let g:lsc_trace_level = 'verbose'
+
 " Airline
 set laststatus=2
 set ttimeoutlen=50
@@ -106,7 +114,7 @@ set relativenumber
 set number
 
 " Search up the tree for the tags file
-set tags+=tags;/
+" set tags+=tags;/
 
 " Open current file in default program on OSX for a preview.
 nnoremap <leader>p :exe ':silent !open -g %'<cr> <bar> :redraw!<cr>
