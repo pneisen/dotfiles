@@ -1,11 +1,11 @@
 # Skip the welcome message
 set fish_greeting ""
 
+# Path
+set -gx PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /snap/bin /usr/games /usr/local/go/bin $HOME/bin $HOME/.local/bin $HOME/go/bin $HOME/.cargo/bin $HOME/.platformio/penv/bin
+
 # Set bindings to Vi
 set fish_key_bindings fish_user_key_bindings
-
-# Load the tab color and title functions
-source $HOME/.config/fish/iterm2_tab.fish
 
 # Load utility functions
 source $HOME/.config/fish/util.fish
@@ -13,16 +13,28 @@ source $HOME/.config/fish/util.fish
 # Load my contacts functions
 source $HOME/.config/fish/contacts.fish
 
-# If at work, run the work script.
-set -l host_match (string match '^dev[0-9]+$' (hostname -s))
-if test -n "$host_match"
-  source $HOME/.config/fish/work.fish
+# Start the ssh agent
+if test -z (pgrep ssh-agent)
+  eval (ssh-agent -c)
+  set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
+  set -Ux SSH_AGENT_PID $SSH_AGENT_PID
+  set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
 end
 
-# If on OSX, run the osx script.
-if test (uname) = "Darwin"
-  source $HOME/.config/fish/osx.fish
-end
+# Common settings
+set -gx TERM xterm-256color
+set -gx EDITOR vim
+set -gx BROWSER firefox
 
-# Run the common script.
-source $HOME/.config/fish/common.fish
+# Turn on Mangohud for Vulkan Games
+set -gx MANGOHUD 1
+
+# Set the umask. This is really needed for WSL.
+umask 077
+
+# Abbreviations
+abbr sshaws ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
+abbr fish_reload source ~/.config/fish/config.fish
+
+# Timeout on linux ssh
+set -gx TMOUT 0# Run the common script.
