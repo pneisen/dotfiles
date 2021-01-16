@@ -15,7 +15,7 @@ source $HOME/.config/fish/contacts.fish
 
 # Start the ssh agent
 if test -z (pgrep ssh-agent)
-  eval (ssh-agent -c)
+  eval (ssh-agent -c) > /dev/null
   set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
   set -Ux SSH_AGENT_PID $SSH_AGENT_PID
   set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
